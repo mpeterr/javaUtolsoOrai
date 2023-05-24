@@ -13,10 +13,12 @@
 <body>
 <%
   String username = (String) request.getAttribute("username");
+  String password = (String) request.getAttribute("password");
 %>
+<h1>Registration</h1>
 <form action="RegisterServlet" method="post">
   Username: <input type="text" name="username" value="<%=username%>"><br>
-  Password: <input type="password" name="password"><br>
+  Password: <input type="password" name="password" value="<%=password%>"><br>
   Full name: <input type="text" name="fullname"><br>
   Address: <input type="text" name="address"><br>
   <input type="submit" value="Submit">

@@ -43,6 +43,7 @@ public class LoginServlet extends HttpServlet {
         {
             //elküldjük a registration jsp oldalra
             request.setAttribute("username", username);
+            request.setAttribute("password", password);
             request.getRequestDispatcher("registration.jsp").forward(request, response);
         }
     }
