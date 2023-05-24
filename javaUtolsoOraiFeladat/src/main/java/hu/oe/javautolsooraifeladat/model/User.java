@@ -74,6 +74,6 @@ public class User {
     }
 
     public boolean isPasswordCorrect(String pw){
-        return true;
+        return pw.equals(password);
     }
 }
