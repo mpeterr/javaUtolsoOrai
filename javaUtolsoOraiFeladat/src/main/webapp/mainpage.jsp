@@ -15,5 +15,6 @@
     User user = (User) request.getSession().getAttribute("user");
 %>
 <h1>Hello <%=user.getFullname()%>!</h1>
+<a href="index.html">Vissza</a>
 </body>
 </html>
