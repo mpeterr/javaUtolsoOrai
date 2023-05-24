@@ -1,5 +1,7 @@
 package hu.oe.javautolsooraifeladat.controller;
 
+import hu.oe.javautolsooraifeladat.model.UserRepository;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -13,6 +15,7 @@ public class UserRepositoryListener implements ServletContextListener, HttpSessi
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         /* This method is called when the servlet context is initialized(when the Web application is deployed). */
+        sce.getServletContext().setAttribute("users", new UserRepository());
     }
 
     @Override
