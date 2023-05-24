@@ -1,4 +1,4 @@
-<%--
+<%@ page import="hu.oe.javautolsooraifeladat.model.User" %><%--
   Created by IntelliJ IDEA.
   User: Péter
   Date: 2023. 05. 24.
@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Main Page</title>
 </head>
 <body>
-
+<%
+    User user = (User) request.getSession().getAttribute("user");
+%>
+<h1>Hello <%=user.getUsername()%>!</h1>
 </body>
 </html>
