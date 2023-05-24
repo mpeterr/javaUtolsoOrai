@@ -72,4 +72,8 @@ public class User {
     public int hashCode() {
         return Objects.hash(username, password, fullname, address);
     }
+
+    public boolean isPasswordCorrect(String pw){
+        return true;
+    }
 }
